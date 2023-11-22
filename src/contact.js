@@ -8,12 +8,13 @@ const contact = (() => {
     const phoneNumber = document.createElement('p');
     phoneNumber.textContent = '📞 222 333 444'
 
-    const address = doucment.createElement('p');
+    const address = document.createElement('p');
     address.textContent = '🏠 Hollywood Boulevard 42, Los Angeles, USA '
 
-    // const restaurantLocation = document.createElement('img')
-    // restaurantLocation.src = 'images/restaurant-location.png'
-    // restaurantLocation.alt = 'Mozzafiato restaurant location'
+     const restaurantLocation = document.createElement('img')
+     restaurantLocation.src = "../dist/images/maps.png"
+     restaurantLocation.alt = ' restaurant location'
+     restaurantLocation.classList.add("map");
 
     const hours = document.createElement('div');
     hours.textContent = "🕑 Mon - Sun 11:00 - 23:00"
@@ -24,7 +25,11 @@ const contact = (() => {
     contact.appendChild(restaurantLocation);
     contact.appendChild(hours);
 
-    content.appendChild('contact');
+    const main = document.getElementById("main");
+
+
+    main.textContent = '';   
+    main.appendChild(contact);
     }
 
     return {
@@ -38,3 +43,5 @@ const contact = (() => {
 
 
 })();
+
+export default contact;
